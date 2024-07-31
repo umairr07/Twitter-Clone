@@ -59,7 +59,7 @@ const logIn = async (req, res) => {
     }
 
     const currentTime = Math.floor(new Date().getTime() / 1000) //miliseconds
-    const expiryTime = currentTime + 7200; // 1 hour
+    const expiryTime = currentTime + 5 * 3600; // 5 hours
     console.log(expiryTime)
 
     const jwtPayload = {
@@ -74,11 +74,13 @@ const logIn = async (req, res) => {
 
     res.json({
         success: true,
-        message: "Login successful"
+        message: "Login successful",
+        token
     })
 }
 
 const logOut = async (req, res) => {
+
     res.json({
         message: "Logout api call"
     })

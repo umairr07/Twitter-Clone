@@ -99,6 +99,7 @@ const getSuggestedUsers = async (req, res) => {
         const filteredUsers = users.filter(user => {
             return !userFollowedByMe.following.includes(user._id)
         })
+
         const suggestedUsers = filteredUsers.slice(0, 4)
         suggestedUsers.forEach(user => {
             user.password = null
