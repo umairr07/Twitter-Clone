@@ -81,6 +81,12 @@ const logIn = async (req, res) => {
 
 const logOut = async (req, res) => {
 
+    const user = await userModel.findOneAndUpdate({ id: req.params.id }, { $set: { token: null } })
+    res.json({
+        success: true,
+        message: "Logout successful"
+
+    })
     res.json({
         message: "Logout api call"
     })

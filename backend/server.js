@@ -28,6 +28,10 @@ app.use("/api/v1/users", userRoutes)
 app.use("/api/v1/posts", postRoutes)
 app.use("/api/v1/notifications", notificationRoutes)
 
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/index.html")
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server is up and running on port ${PORT}`)

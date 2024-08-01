@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X Clone</title>
+    <style>
+      body {
+        background: #000;
+        color: #fff;
+      }
+      a {
+        color: skyblue;
+      }
+
+      #root {
+        margin-left: 100px;
+      }
+      #note {
+        color: rgb(245, 115, 115);
+        /* text-decoration: underline; */
+        font-size: 20px;
+        font-style: italic;
+      }
+      #title {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div>
+        <h1 id="title">Welcome to Twiiter(X) Clone</h1>
+      </div>
+
+      <div>
+        <h1>API Documentation</h1>
+        <p id="note">Note: To use the APIs please signup and login first...</p>
+      </div>
+
+      <!-- User Authentication Apis -->
+      <div>
+        <h2>* User Authentication APIs *</h2>
+        <div>
+          <p>
+            Signup :
+            <a href="https://twitter-clone-qtw8.onrender.com/api/v1/auth/signup"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/auth/signup</a
+            >
+            (POST API)
+          </p>
+          <p>
+            Login :
+            <a href="https://twitter-clone-qtw8.onrender.com/api/v1/auth/login"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/auth/login</a
+            >
+            (POST API)
+          </p>
+          <p>
+            Logout :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/auth/logout/:id"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/auth/logout/:id</a
+            >
+            (POST API)
+          </p>
+        </div>
+      </div>
+      <br />
+
+      <!--User profile Apis  -->
+      <div>
+        <h2>* User APIs *</h2>
+        <div>
+          <p>
+            User Profile :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/users/profile/:username"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/users/profile/:username</a
+            >
+            (GET API)
+          </p>
+
+          <p>
+            Suggested Users :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/users/suggested"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/users/suggested</a
+            >
+            (GET API)
+          </p>
+
+          <p>
+            Follow/Unfollow Users :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/users/profile/:id"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/users/profile/:id</a
+            >
+            (POST API)
+          </p>
+
+          <p>
+            Update Profile :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/users/update"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/users/update</a
+            >
+            (POST API)
+          </p>
+        </div>
+      </div>
+      <br />
+
+      <!-- Post/Tweets Apis -->
+      <div>
+        <h2>* Post/Tweets APIs *</h2>
+
+        <div>
+          <p>
+            Create Post :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/posts/create"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/posts/create</a
+            >
+            (POST API)
+          </p>
+
+          <p>
+            Delete Post :
+            <a href="https://twitter-clone-qtw8.onrender.com/api/v1/posts/:id"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/posts/:id</a
+            >
+            (DELETE API)
+          </p>
+
+          <p>
+            Like/Unlike Post :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/posts/like/:id"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/posts/like/:id</a
+            >
+            (POST API)
+          </p>
+
+          <p>
+            Comment on Post :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/posts/comment/:id"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/posts/comment/:id</a
+            >
+            (POST API)
+          </p>
+
+          <p>
+            Get All Posts :
+            <a href="https://twitter-clone-qtw8.onrender.com/api/v1/posts/all"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/posts/all</a
+            >
+            (GET API)
+          </p>
+
+          <p>
+            Get User Posts :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/posts/userPosts/:username"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/posts/userPosts/:username</a
+            >
+            (GET API)
+          </p>
+
+          <p>
+            Get Following Posts :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/posts/followingPosts"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/posts/followingPosts</a
+            >
+            (GET API)
+          </p>
+        </div>
+      </div>
+      <br />
+
+      <!-- Notification Apis -->
+      <div>
+        <h2>* Notification Apis *</h2>
+        <div>
+          <p>
+            All Notifications :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/notifications/all"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/notifications/all</a
+            >
+            (GET API)
+          </p>
+
+          <p>
+            Delete All Notifications :
+            <a
+              href="https://twitter-clone-qtw8.onrender.com/api/v1/notifications/delete"
+              >https://twitter-clone-qtw8.onrender.com/api/v1/notifications/delete</a
+            >
+            (DELETE API)
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
